@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:weathet_app/models/weather.dart';
 import 'package:weathet_app/screens/detials_screen.dart';
 
 class CardsWeather extends StatelessWidget {
   const CardsWeather({
     super.key,
+    required this.city,
   });
+
+  final Weather city;
 
   @override
   Widget build(BuildContext context) {

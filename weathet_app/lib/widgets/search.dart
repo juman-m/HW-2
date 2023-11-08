@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:weathet_app/global/global.dart';
 import 'package:weathet_app/models/weather.dart';
+import 'package:weathet_app/screens/home_screen.dart';
 import 'package:weathet_app/services/weather_api.dart';
 
-class Search extends StatelessWidget {
+class Search extends StatefulWidget {
   const Search({
     super.key,
   });
 
+  @override
+  State<Search> createState() => _SearchState();
+}
+
+class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     TextEditingController cityController = TextEditingController();
@@ -38,12 +44,20 @@ class Search extends StatelessWidget {
             IconButton(
                 onPressed: () async {
                   try {
+                    isLoading = true;
+
+                    context
+                        .findAncestorStateOfType<HomeScreenState>()!
+                        .setState(() {});
                     city = await getCityData(cityController.text);
                     if (city != null) {
                       citiesList.add(city!);
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text("The city is found")));
-                          
+                      isLoading = false;
+                      context
+                          .findAncestorStateOfType<HomeScreenState>()!
+                          .setState(() {});
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text("The city not found")));

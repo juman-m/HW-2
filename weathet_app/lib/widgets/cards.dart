@@ -37,11 +37,14 @@ class CardsWeather extends StatelessWidget {
                         Text(
                           "London",
                           style: TextStyle(
-                              fontSize: 30, fontWeight: FontWeight.w900),
+                              fontSize: 30,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white),
                         ),
                         Text(
                           "10:30pm",
-                          style: TextStyle(fontWeight: FontWeight.w700),
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, color: Colors.white),
                         ),
                       ],
                     ),
@@ -50,7 +53,7 @@ class CardsWeather extends StatelessWidget {
                     ),
                     Text(
                       "21",
-                      style: TextStyle(fontSize: 50),
+                      style: TextStyle(fontSize: 50, color: Colors.white),
                     ),
                   ],
                 ),
@@ -60,15 +63,20 @@ class CardsWeather extends StatelessWidget {
                 Row(
                   children: [
                     Text("Mostly clear",
-                        style: TextStyle(fontWeight: FontWeight.w700)),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, color: Colors.white)),
                     SizedBox(
                       width: 170,
                     ),
-                    Text("H:30", style: TextStyle(fontWeight: FontWeight.w700)),
+                    Text("H:30",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, color: Colors.white)),
                     SizedBox(
                       width: 5,
                     ),
-                    Text("L:18", style: TextStyle(fontWeight: FontWeight.w700)),
+                    Text("L:18",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700, color: Colors.white)),
                   ],
                 ),
               ],

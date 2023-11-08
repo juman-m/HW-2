@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:weathet_app/widgets/cards.dart';
 import 'package:weathet_app/widgets/search.dart';
 import 'package:weathet_app/widgets/title_home.dart';

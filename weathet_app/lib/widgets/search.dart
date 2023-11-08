@@ -15,8 +15,8 @@ class Search extends StatelessWidget {
           width: 370,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              color: Color.fromARGB(63, 158, 158, 158)),
-          child: TextField(
+              color: const Color.fromARGB(63, 158, 158, 158)),
+          child: const TextField(
             decoration: InputDecoration(
                 hintText: "Search for a city or airport",
                 hintStyle: TextStyle(color: Color.fromARGB(255, 158, 158, 158)),
